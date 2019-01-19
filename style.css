@@ -4,7 +4,5 @@ body {
 
 .jumbotron {
     color: #fff;
-    background-color: navy !important;
+    background-color: navy;
 }
-
-box-sizing: none;
