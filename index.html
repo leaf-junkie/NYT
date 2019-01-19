@@ -5,9 +5,9 @@
     <title>NYT Article Search</title>
 
     <!-- Links to CSS -->
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
     <div class="container">
@@ -25,63 +25,65 @@
           <div class="panel panel-default">
             <div class="panel-body">
               <form>
-                  <h5>Search Parameters</h5>
+                <h5 class="card-header">Search Parameters</h5>
 
-                  <!-- Search Term -->
-                  <div class="input-group">
-                    <label for="searchTerm">Search Term:</label>
-                    <input type="text" class="input-control" id="termSearch" placeholder="">
-                  </div>
+                <!-- Search Term -->
+                <div class="input-group">
+                  <label for="searchTerm">Search Term:</label>
+                  <input type="text" class="input-control" id="termSearch" placeholder="">
+                </div>
 
-                  <!-- Number of Records -->
-                  <div class="input-group">
-                    <label for="numberofRecords">Number of Records to Retrieve:</label>
-                    <input type="text" class="form-control" id="recordSearch" placeholder="">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">1</a>
-                        <a class="dropdown-item" href="#">5</a>
-                        <a class="dropdown-item" href="#">10</a>
-                      </div>
+                <!-- Number of Records -->
+                <div class="input-group">
+                  <label for="numberofRecords">Number of Records to Retrieve:</label>
+                  <input type="text" class="form-control" id="recordSearch" placeholder="">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">1</a>
+                      <a class="dropdown-item" href="#">5</a>
+                      <a class="dropdown-item" href="#">10</a>
                     </div>
                   </div>
+                </div>
 
-                  <!-- Start Year -->
-                  <div class="input-group">
-                    <label for="=startYear">Start Year:</label>
-                    <input type="text" class="input-control" id="startYear" placeholder="Optional">
-                  </div>
+                <!-- Start Year -->
+                <div class="input-group">
+                  <label for="=startYear">Start Year:</label>
+                  <input type="text" class="input-control" id="startYear" placeholder="Optional">
+                </div>
 
-                  <!-- End Year -->
-                  <div class="input-group">
-                    <label for="endYear">End Year:</label>
-                    <input type="text" class="input-control" id="endYear" placeholder="Optional">
-                  </div>
-                </form>
-              </div>
+                <!-- End Year -->
+                <div class="input-group">
+                  <label for="endYear">End Year:</label>
+                  <input type="text" class="input-control" id="endYear" placeholder="Optional">
+                </div>
+
+              </form>
             </div>
           </div>
         </div>
+      </div>
       <br>
 
       <!-- Search and Clear Results buttons -->
-      <button type="submit" class="btn btn-light submit">Search</button>
-      <button type="reset" class="btn btn-light reset">Clear Results</button>
+      <button type="submit" class="btn btn-light submit"><img src="assets/images/search-icon.png" style="max-width: 20px;">Search</button>
+      <button type="reset" class="btn btn-light reset"><img src="assets/images/trash-icon.png" style="max-width: 20px;">Clear Results</button>
     </div>
+    <br><br>
 
     <!-- Results will be shown here -->
     <div class="container">
-      
+      <h5 class="card-header">Top Articles</h5>
     </div>
 
     <footer>
-      <p id="footer-text">Made with lots and lots of love</p>
+      <p id="footer-text">Made with lots and lots of love <img src="assets/images/heart.png" style="max-width: 15px"></p>
     </footer>
     <!-- Link to Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/apps.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html> 
