@@ -5,47 +5,64 @@
     <title>NYT Article Search</title>
 
     <!-- Links to CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div class="container-search">
+    <div class="container">
 
-      <!-- Row 1 -->
+      <!-- Header -->
       <div class="row">
-        <div class="jumbotron text-center">
+        <header class="jumbotron text-center">
           <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i>New York Times Search</h1>
-        </div>
+        </header>
       </div>
 
-      <!-- Row 2 -->
+      <!-- Search Area -->
       <div class="row">
-        <div class="col-xs-12 col-xs-12 col-md-3">
+        <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-body">
               <form>
-                <div class="input-group">
-                  <label for="searchTerm">Search Term:</label>
-                  <input type="text" class="input-control" id="termSearch" placeholder="...">
-                </div>
-                <div class="input-group">
-                  <label for="numberofRecords">Number of Records to Retrieve:</label>
-                  <input type="text" class="input-control" id="recordSearch" placeholder="...">
-                </div>
-                <div class="input-group">
-                  <label for="=startYear">Start Year (Optional):</label>
-                  <input type="text" class="input-control" id="startYear" placeholder="...">
-                </div>
-                <div class="input-group">
-                  <label for="endYear">End Year (Optional):</label>
-                  <input type="text" class="input-control" id="endYear" placeholder="...">
-                </div>
-              </form>
+                  <h5>Search Parameters</h5>
+
+                  <!-- Search Term -->
+                  <div class="input-group">
+                    <label for="searchTerm">Search Term:</label>
+                    <input type="text" class="input-control" id="termSearch" placeholder="">
+                  </div>
+
+                  <!-- Number of Records -->
+                  <div class="input-group">
+                    <label for="numberofRecords">Number of Records to Retrieve:</label>
+                    <input type="text" class="form-control" id="recordSearch" placeholder="">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">1</a>
+                        <a class="dropdown-item" href="#">5</a>
+                        <a class="dropdown-item" href="#">10</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Start Year -->
+                  <div class="input-group">
+                    <label for="=startYear">Start Year:</label>
+                    <input type="text" class="input-control" id="startYear" placeholder="Optional">
+                  </div>
+
+                  <!-- End Year -->
+                  <div class="input-group">
+                    <label for="endYear">End Year:</label>
+                    <input type="text" class="input-control" id="endYear" placeholder="Optional">
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       <br>
 
       <!-- Search and Clear Results buttons -->
@@ -53,7 +70,8 @@
       <button type="reset" class="btn btn-light reset">Clear Results</button>
     </div>
 
-    <div class="container-results">
+    <!-- Results will be shown here -->
+    <div class="container">
       
     </div>
 
