@@ -1,12 +1,12 @@
 function search() {
     // event listener for for submit button (#btn could be wrong)
-    $("#btn").on("click", function(){
+    $(".search").on("click", function(){
         // drop the attributes into variables
-        var keyWord = $(this).attr("termSearch");
-        var records = $(this).attr("recordSearch");
-        var startDate = $(this).attr("startYear" + 0101);
-        var endDate = $(this).attr("endYear" + 1231);
-        
+        var keyWord = $("#termSearch").val().trim();
+        var records = $("#recordSearch");
+        var startDate = $("#startYear" + 0101).val().trim();
+        var endDate = $("#endYear" + 1231).val().trim();
+        console.log(keyWord);
         // set the api key and url into variables
         var apiKey = "fTWg5DkHzhU8g2nA6VPziPhu2LsGxGkG";
         var queryURL = "https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2/articlesearch.json?&query=" + keyWord + "&begin_date=" + startDate + "&end_date=" + endDate + "&api-key=" + apiKey; 
@@ -28,8 +28,9 @@ function search() {
   
             // append to the div 
             newDiv.append(title, author, date, link);
+            console.log(newDiv);
             // append to the DOM ****Don't think we have a results Div yet
-            // $("#some div id").append(newDiv);
+            $(".card-header").append(newDiv);
   
         } //end of the loop
         
@@ -37,6 +38,11 @@ function search() {
     
     }); //end click function
   }; //end search function
+
+$("reset").on("click", function(event){
+    event.preventDefault();
+    $('.input-group').innerhtml('');
+});
   
   
   
